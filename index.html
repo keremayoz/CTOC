@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css" />
+<link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<title>Conference on Theory of Computation</title>
+</head>
+
+<script>
+	function sticky_relocate() {
+		var window_top = $(window).scrollTop();
+		var div_top = $('#stick-detect').offset().top;
+		if (window_top > div_top) {
+			$('.buttons').addClass('stick');
+		} 
+		else {
+			$('.buttons').removeClass('stick');
+		}
+	}
+	$(function() {
+		$(window).scroll(sticky_relocate);
+		sticky_relocate();
+	});
+</script>
+
+
+<body>
+	<header>
+		<h1 class="herotext">Conference on <br> Theory of <br> Computation</h1>
+	</header>
+
+	<div id="stick-detect"></div>
+	<div class="buttons">
+			<a class="logo">C T O C</a>
+			<a href="#speaker-start" >Speakers</a>
+			<a href="#schedule-start" >Schedule</a>
+			<a href="#map-start" >Location</a>
+			<a href="#modal" >Register</a>
+			<a href="http://www.google.com" >Help</a>
+	</div>
+
+	<div class="main">
+		<div id="speaker-start"><h2>Speakers</h2></div>
+		<section class="cards">
+				<div class="card">
+					<img src="scott.jpg">
+					<h3>Scott<br />Aaronson</h3>
+					<h4>University at Texas Austin<br />
+						Computer Science</h4>
+					<p>I'm David J. Bruton Centennial Professor of Computer Science at the University of Texas at Austin. My research interests center around the capabilities and limits of quantum computers, and computational complexity theory more generally.</p>
+					<p><a class="link" href="https://www.scottaaronson.com/">More about Scott</a></p>
+				</div>
+
+
+				<div class="card">
+					<img src="ryan.jpg">
+					<h3>Ryan<br />Williams</h3>
+					<h4>MIT<br/>
+						Computer Science</h4>
+					<p>I got a PhD from Carnegie Mellon and I was an undergrad at Cornell. In general, I try to understand what is easy and what is hard to compute. I work in algorithm design and complexity theory, and I especially like connections between the two subjects. </p>
+					<p><a class="link" href="https://people.csail.mit.edu/rrw/">More about Ryan</a></p>
+				</div>
+
+
+				<div class="card">
+					<img src="sipser.jpg">
+					<h3>Michael<br />Sipser</h3>
+					<h4>MIT<br/>
+						Mathematics</h4>
+					<p>I am Professor of Mathematics and member of the Computer Science at MIT. My research areas are in algorithms and complexity theory, interactive proof systems, randomness, quantum computation, establishing inherent computational difficulty of problems.</p>
+					<p><a class="link" href="http://www-math.mit.edu/~sipser/">More about Michael</a></p>
+				</div>
+
+
+				<div class="card">
+					<img src="christos.jpg">
+					<h3>Christos<br />Papadimitrou</h3>
+					<h4>Columbia University<br/>
+						Computer Science</h4>
+					<p>I am best known for my work in computational complexity, helping to expand its methodology and reach. I have also explored other fields, having contributed to biology and the theory of evolution, economics, and game theory, artificial intelligence.</p>
+					<p><a class="link" href="https://engineering.columbia.edu/faculty/christos-papadimitriou">More about Christos</a></p>
+				</div>
+		</section>
+
+
+	
+
+		<div id="schedule-start"><h2>Schedule</h2></div>
+		<section class="schedule">
+			<table>
+				<tr>
+					<th></th>
+					<th>Wednesday, Aug 27</th>
+					<th>Thursday, Aug 27</th>
+					<th>Friday, Aug 28</th>				
+				</tr>
+
+				<tr>
+					<td class="timeslot">10:00  <br> | <br> 12:00</td>
+					<td><h5>Scott Aaronson</h5> Quantum Computing since Democritus </td>
+					<td><h5>Michael Sipser</h5> The Complexity of Finite Functions </td>
+					<td><h5>Ryan Williams</h5> Hardness Magnification for all Sparse NP Languages </td>				
+				</tr>
+
+				<tr>
+					<td class="timeslot">12:00 <br> | <br> 13:00</td>
+					<td class="breakText">Lunch Break</td>
+					<td class="breakText">Lunch Break</td>
+					<td class="breakText">Lunch Break</td>			
+				</tr>
+
+				<tr>
+					<td class="timeslot">13:00  <br> | <br> 15:00</td>
+					<td><h5>Paper Presentations</h5>Part 1</td>
+					<td><h5>Paper Presentations</h5>Part 2</td>
+					<td><h5>Paper Presentations</h5>Best Papers</td>				
+				</tr>
+
+				<tr>
+					<td class="timeslot">15:00 <br> | <br> 16:00</td>
+					<td class="breakText">High Tea</td>
+					<td class="breakText">High Tea</td>
+					<td class="breakText">High Tea</td>			
+				</tr>
+
+				<tr>
+					<td class="timeslot">16:00  <br> | <br> 18:00</td>
+					<td><h5>Christos Papadimitrou</h5>Combinatorial Optimization: Algorithms and Complexity</td>
+					<td><h5>Scott Aaronson</h5>Why Is Proving P ̸= NP Difficult</td>
+					<td><h5>Ryan Williams</h5>On the NP-Hardness of Computing Circuit Complexity</td>				
+				</tr>
+			</table>
+		</section>
+
+		
+		<div id="map-start"><h2>Location</h2></div>
+		
+		<section class="map">
+			
+			<div class="column-left">
+				<h3>How to reach ?</h3>
+				<p>By Train</p>
+				<h4>Use London-Manchester train from London Station, then transfer to University of Manchester by T-64 bus or M3 metro. Detailed schedules can be found here.</h4>
+
+				<p>By Plane</p>
+				<h4>Closest airport is Manchester Grand Airport. Transfer to University of Manchester by city shuttle and take-off in Hulme station.</h4>
+
+				<p>By Car</p>
+				<h4>When arrived with your personal car, please indicate your registeration ID to security and request for a parking lot.</h4>
+			</div>
+			<div id="gmap" class="column-right">
+				<iframe 
+				class="googlemap" frameborder="0" scrolling="no"
+				src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBYI-5CdGxJsvvFRPhNnofiAYCboVbJZ_w&center=52.56785487305736,-1.7125646989290821&zoom=10&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.arterial%7Celement:geometry.fill%7Ccolor:0xa9274b&style=feature:road.arterial%7Celement:geometry.stroke%7Ccolor:0x800040&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway%7Celement:geometry.fill%7Csaturation:-10&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:geometry.fill%7Ccolor:0xa9274b&style=feature:road.local%7Celement:geometry.stroke%7Ccolor:0xa9274b%7Cweight:0.5&style=feature:road.local%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:transit.line%7Celement:geometry.fill%7Ccolor:0x800040&style=feature:transit.line%7Celement:geometry.stroke%7Ccolor:0x800040&style=feature:transit.station%7Celement:geometry.fill%7Ccolor:0xffffff&style=feature:transit.station%7Celement:geometry.stroke%7Ccolor:0xffffff&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:geometry.fill%7Ccolor:0x808080&style=feature:water%7Celement:geometry.stroke%7Ccolor:0xffffff&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=480x360">
+				</iframe>
+			</div>
+		</section>
+
+		<div id="modal" class="modalBox">
+			<div>
+				<a href="#close" class="closebutton">X</a>
+
+				<h1>C T O C<br/>Online Registeration</h1>
+
+				<textarea placeholder="Name"></textarea>
+				<textarea placeholder="Institution"></textarea>
+				<textarea placeholder="Email"></textarea>
+				<textarea placeholder="Preferences"></textarea>
+
+				<h4>A registration link will be sent to the provided email address.</h4>
+				<a href="#close" class="sendButton">Send</a>
+				
+			</div>
+		</div>
+
+	</div>
+
+	
+</body>
+
+
+<script>
+      function initMap() {
+        // Styles a map in night mode.
+        var map = new google.maps.Map(document.getElementById('gmap'), {
+          center: {lat: 40.674, lng: -73.945},
+          zoom: 12,
+          styles: [
+            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+            {
+              featureType: 'administrative.locality',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'geometry',
+              stylers: [{color: '#263c3f'}]
+            },
+            {
+              featureType: 'poi.park',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#6b9a76'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry',
+              stylers: [{color: '#38414e'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#212a37'}]
+            },
+            {
+              featureType: 'road',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#9ca5b3'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry',
+              stylers: [{color: '#746855'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'geometry.stroke',
+              stylers: [{color: '#1f2835'}]
+            },
+            {
+              featureType: 'road.highway',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#f3d19c'}]
+            },
+            {
+              featureType: 'transit',
+              elementType: 'geometry',
+              stylers: [{color: '#2f3948'}]
+            },
+            {
+              featureType: 'transit.station',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#d59563'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'geometry',
+              stylers: [{color: '#17263c'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.fill',
+              stylers: [{color: '#515c6d'}]
+            },
+            {
+              featureType: 'water',
+              elementType: 'labels.text.stroke',
+              stylers: [{color: '#17263c'}]
+            }
+          ]
+        });
+      }
+    </script>
+     <script src="https://maps.googleapis.com/maps/api/staticmap?key=AIzaSyBYI-5CdGxJsvvFRPhNnofiAYCboVbJZ_w&center=52.56785487305736,-1.7125646989290821&zoom=10&format=png&maptype=roadmap&style=element:geometry%7Ccolor:0x212121&style=element:labels.icon%7Cvisibility:off&style=element:labels.text.fill%7Ccolor:0x757575&style=element:labels.text.stroke%7Ccolor:0x212121&style=feature:administrative%7Celement:geometry%7Ccolor:0x757575&style=feature:administrative.country%7Celement:labels.text.fill%7Ccolor:0x9e9e9e&style=feature:administrative.land_parcel%7Celement:labels%7Cvisibility:off&style=feature:administrative.locality%7Celement:labels.text.fill%7Ccolor:0xbdbdbd&style=feature:poi%7Celement:labels.text%7Cvisibility:off&style=feature:poi%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:poi.park%7Celement:geometry%7Ccolor:0x181818&style=feature:poi.park%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:poi.park%7Celement:labels.text.stroke%7Ccolor:0x1b1b1b&style=feature:road%7Celement:geometry.fill%7Ccolor:0x2c2c2c&style=feature:road%7Celement:labels.text.fill%7Ccolor:0x8a8a8a&style=feature:road.arterial%7Celement:geometry%7Ccolor:0x373737&style=feature:road.arterial%7Celement:geometry.fill%7Ccolor:0xa9274b&style=feature:road.arterial%7Celement:geometry.stroke%7Ccolor:0x800040&style=feature:road.arterial%7Celement:labels%7Cvisibility:off&style=feature:road.highway%7Celement:geometry%7Ccolor:0x3c3c3c&style=feature:road.highway%7Celement:geometry.fill%7Csaturation:-10&style=feature:road.highway%7Celement:labels%7Cvisibility:off&style=feature:road.highway.controlled_access%7Celement:geometry%7Ccolor:0x4e4e4e&style=feature:road.local%7Cvisibility:off&style=feature:road.local%7Celement:geometry.fill%7Ccolor:0xa9274b&style=feature:road.local%7Celement:geometry.stroke%7Ccolor:0xa9274b%7Cweight:0.5&style=feature:road.local%7Celement:labels%7Cvisibility:off&style=feature:road.local%7Celement:labels.text.fill%7Ccolor:0x616161&style=feature:transit%7Celement:labels.text.fill%7Ccolor:0x757575&style=feature:transit.line%7Celement:geometry.fill%7Ccolor:0x800040&style=feature:transit.line%7Celement:geometry.stroke%7Ccolor:0x800040&style=feature:transit.station%7Celement:geometry.fill%7Ccolor:0xffffff&style=feature:transit.station%7Celement:geometry.stroke%7Ccolor:0xffffff&style=feature:water%7Celement:geometry%7Ccolor:0x000000&style=feature:water%7Celement:geometry.fill%7Ccolor:0x808080&style=feature:water%7Celement:geometry.stroke%7Ccolor:0xffffff&style=feature:water%7Celement:labels.text.fill%7Ccolor:0x3d3d3d&size=480x360"
+    async defer></script>
+
+</html>
