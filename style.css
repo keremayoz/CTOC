@@ -21,7 +21,7 @@ body  {
 header	{
 	width: 100%;
 	height: 95%;
-	background-image: url('hero_updated.jpg');
+	background-image: url('hero.jpg');
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: top;
@@ -37,7 +37,12 @@ header	{
 	color: rgb(192, 192, 192);
 	line-height: 1.2;
 	text-align: center;
-	padding: 0 0 6% 0;
+}
+
+.menu {
+	display:flex;
+	flex-wrap: wrap;
+	flex-direction: row;
 }
 
 .buttons {
@@ -63,17 +68,19 @@ header	{
   	text-align: center;
 	font-size: 16px;
 	color: rgba(255,255,255);
-	padding: 12px 15px; /* Top Right Bottom Left (if 2 values, only Top/Bottom and Right/Left are set) */
+	padding: 15px 15px; /* Top Right Bottom Left (if 2 values, only Top/Bottom and Right/Left are set) */
 	margin: 0 auto; /* Centralise the button */
 	margin-bottom: 40px;
 	font-weight: 600;
 	transition: all 0.2s ease;
 }
 
-.buttons .logo {
-	background-color: rgba(45, 5, 16, 0.8);
-	border-radius: 50px;
-	font-weight: 600;
+.logo {
+	display: block;
+	padding: 0 0 0 3%;
+	display: block; /* Disable its inline feature */ 
+    margin-top: 12px;
+    margin-left: 26px;
 }
 
 .buttons a:hover {
@@ -95,7 +102,7 @@ h2	{
 	text-align: center;
 	color: rgba(122,131,153,1);
 	margin: 0;
-	padding: 36px 0 25px 0;
+	padding: 2% 0 2% 0;
 }
 
 h3	{
@@ -111,8 +118,8 @@ h4	{
 	font-size: 12px;
 	line-height: 14px;
 	font-weight: 800;
+	color: rgba(122,131,153,1);
 	margin: 0;
-	color: rgba(255,255,255,0.6);
 	padding: 12px 12px 0 12px;
 }
 
@@ -120,7 +127,7 @@ h4	{
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 400;
-	color: rgba(122,131,153,1);
+	color: rgba(255,255,255,0.7);
 	margin: 0;
 	padding: 12px;
 }
@@ -158,10 +165,11 @@ header p	{
 
 .link {
 	text-decoration: none; /* Remove the underline in link */
-	color: rgba(255,255,255,0.8);
+	color: rgba(122,131,153,1);
 	width: 82px;
 	box-shadow:	0px 0px 0px rgba(0,0,0,0.5); /* Shadow */
 	font-size: 12px;
+	font-weight: 800;
 }
 
 .schedule {
@@ -314,22 +322,15 @@ textarea::-webkit-input-placeholder {
 }
 
 .map {
-	height:550px;
+	height: 550px;
 	overflow: hidden;
 	position: relative;
 	display: flex;
 }
 
-#map-start {
-  	background: linear-gradient(rgba(0,0,0,.85), rgba(0,0,0,.85)), url("mid3.jpg");
-}
-
 .googlemap {
-	position: absolute;
-	height: 66%;
-	width: 35%;
-	right: 10%;
-	top: 0;
+	height: 75%;
+	width: 70%;
 	margin-top: 20px;
 	filter: contrast(1);
 	box-shadow:	0px 0px 0px rgba(0,0,0,0.5); /* Shadow */
@@ -337,7 +338,7 @@ textarea::-webkit-input-placeholder {
 }
 
 .column-left {
-	margin-left: 17%;
+	margin-left: 15%;
   	flex: 45%;
 }
 .column-right {
@@ -377,10 +378,10 @@ textarea::-webkit-input-placeholder {
   	flex: 20%;
 }
 .contact-left a {
-	text-decoration: none; /* Remove the underline in link */
+	text-decoration: none;
 	font-size: 16px;
 	color: rgba(255,255,255, 0.8);
-	margin: 0 auto; /* Centralise the button */
+	margin: 0 auto; 
 	transition: all 0.2s ease;
 }
 .contact-right {
@@ -390,29 +391,63 @@ textarea::-webkit-input-placeholder {
 .footer {
     text-align: center;
     height: 5%;
+    padding: 0% 3% 0.5% 3%;
     color: #7a8399;
-    padding-bottom: 20px;
     font-style: italic;
 }
 
-@media	(max-width: 840px)	{
-	.two_columns	{
-		width: 85%;
+
+@media	(max-width: 1500px)	{
+	.herotext {
+		top: -10%;
+		position: relative;
 	}
+	.modalBox > div	{ 
+		width: 30%;
+		height: 50%;
+	}
+}
+
+@media	(max-width: 840px)	{
 	.card	{
 		flex-basis: 45%;
 	}
+	.map {
+		flex-direction: column;
+		height: 900px;
+	}
+	.googlemap {
+		margin: 80px;
+	}
+
+
+
 }
 @media	(max-width: 630px)	{ /* 1260 / 2 */
 	.column	{
 		flex-basis: 90%; /* column becomes single-column */
 	}
-	h1	{
-		text-align: left;
-		padding-left: 10%;
-		font-size: 30px;
-	}
 	.card	{
 		flex-basis: 92%;
 	}
+	.contact {
+		flex-direction: column;
+	}
+	.modalBox > div	{ 
+			width: 50%;
+			height: 60%;
+	}
 }
+
+@media (max-width: 420px )	{ /* 1260 / 3 */
+	.modalBox > div	{ 
+			width: 50%;
+			height: 70%;
+	}
+}
+
+
+
+
+
+
